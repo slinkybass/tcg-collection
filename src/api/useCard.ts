@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import type { CardDetail } from "../types/Card";
+import type { CardDetail } from "@/types/Card";
 
 const API_BASE = import.meta.env.VITE_TCG_BASE_API_URL;
 

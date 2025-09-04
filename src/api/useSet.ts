@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import type { SetDetail } from "../types/Set";
+import type { SetDetail } from "@/types/Set";
 
 const API_BASE = import.meta.env.VITE_TCG_BASE_API_URL;
 
