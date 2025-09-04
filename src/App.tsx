@@ -4,7 +4,6 @@ import Sets from "./pages/Sets";
 import Collection from "./pages/Collection";
 import Profile from "./pages/Profile";
 import { Button } from "./components/ui/button";
-import "./App.css";
 
 function App() {
 	return (
