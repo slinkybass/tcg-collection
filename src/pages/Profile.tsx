@@ -1,3 +1,7 @@
 export default function Profile() {
-  return <h1 className="text-2xl font-bold">Perfil</h1>;
+	return (
+		<div className="p-4">
+			<h1 className="text-2xl font-bold mb-4">Perfil</h1>
+		</div>
+	);
 }
