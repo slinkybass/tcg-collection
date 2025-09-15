@@ -17,6 +17,8 @@ export default function Card() {
 				<CardContent className="flex flex-col justify-start gap-2">
 					<h2 className="text-xl font-bold">{card.name}</h2>
 					<p className="text-sm text-muted-foreground">ID: {card.id}</p>
+					<p className="text-sm text-muted-foreground">Category: {card.category}</p>
+					<p className="text-sm text-muted-foreground">Rarity: {card.rarity}</p>
 				</CardContent>
 			</CardShad>
 		</div>
