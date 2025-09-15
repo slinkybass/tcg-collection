@@ -14,7 +14,7 @@ export default function Sets() {
 				<Link key={set.id} to={`/sets/${set.id}`} title={set.name} className="group">
 					<Card>
 						<CardContent>
-							<img src={`${set.logo}.png`} alt={set.name} className="h-20 object-contain mx-auto px-2 opacity-85 group-hover:opacity-100 group-hover:scale-110 ease-in duration-200" />
+							<img src={set.logo ? `${set.logo}.png` : "/favicon.svg"} alt={set.name} className="h-20 object-contain mx-auto px-2 opacity-85 group-hover:opacity-100 group-hover:scale-110 ease-in duration-200" />
 						</CardContent>
 						<CardFooter className="mx-auto max-w-full">
 							<CardTitle className="uppercase font-bold truncate py-1">{set.name}</CardTitle>
