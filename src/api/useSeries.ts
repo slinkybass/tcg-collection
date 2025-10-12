@@ -1,33 +1,31 @@
 import { useState, useEffect } from "react";
-import type { Card } from "@/types/Card";
+import type { Serie } from "@/types/Serie";
 
 const API_BASE = import.meta.env.VITE_TCG_BASE_API_URL;
 
-export function useCard(cardId: string) {
-  const [card, setCard] = useState<Card | null>(null);
+export function useSeries() {
+  const [series, setSeries] = useState<Serie[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!cardId) return;
-
     setLoading(true);
     setError(null);
 
-    fetch(`${API_BASE}/cards/${cardId}`)
+    fetch(`${API_BASE}/series`)
       .then((res) => {
-        if (!res.ok) throw new Error(`Error loading card: ${res.status}`);
+        if (!res.ok) throw new Error(`Error loading series: ${res.status}`);
         return res.json();
       })
-      .then((data: Card) => {
-        setCard(data);
+      .then((data: Serie[]) => {
+        setSeries(data);
         setLoading(false);
       })
       .catch((err) => {
         setError(err.message);
         setLoading(false);
       });
-  }, [cardId]);
+  }, []);
 
-  return { card, loading, error };
+  return { series, loading, error };
 }

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "@/pages/Home";
-import Sets from "@/pages/Sets";
+import Series from "@/pages/Series";
+import Serie from "@/pages/Serie";
 import Set from "@/pages/Set";
 import Card from "@/pages/Card";
 import Collection from "@/pages/Collection";
@@ -15,7 +16,7 @@ function App() {
 					<Link to="/">Inicio</Link>
 				</Button>
 				<Button asChild>
-					<Link to="/sets">Sets</Link>
+					<Link to="/series">Cards</Link>
 				</Button>
 				<Button asChild>
 					<Link to="/collection">Colección</Link>
@@ -28,7 +29,8 @@ function App() {
 			<main className="container mx-auto">
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/sets" element={<Sets />} />
+					<Route path="/series" element={<Series />} />
+					<Route path="/series/:serieId" element={<Serie />} />
 					<Route path="/sets/:setId" element={<Set />} />
 					<Route path="/card/:cardId" element={<Card />} />
 					<Route path="/collection" element={<Collection />} />
