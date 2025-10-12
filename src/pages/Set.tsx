@@ -26,7 +26,7 @@ export default function Set() {
 				<h1 className="text-2xl font-bold uppercase mt-2">{set.name}</h1>
 			</div>
 			<div className="text-center mb-4 pb-4 border-b">
-				<Button onClick={handleOpenPack}>
+				<Button className="cursor-pointer" disabled={packLoading} onClick={handleOpenPack}>
 					Abrir pack
 				</Button>
 				{packOpened && (

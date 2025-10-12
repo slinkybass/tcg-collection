@@ -15,10 +15,19 @@ export default function Card() {
 			<CardShad className="flex flex-row items-start p-4 gap-4 border-0 shadow-none">
 				<img src={card.imageHigh ? `${card.imageHigh}` : "/favicon.svg"} alt={card.name} className="h-100 object-contain rounded-md shadow-sm" />
 				<CardContent className="flex flex-col justify-start gap-2">
-					<h2 className="text-xl font-bold">{card.name}</h2>
-					<p className="text-sm text-muted-foreground">ID: {card.id}</p>
-					<p className="text-sm text-muted-foreground">Category: {card.category}</p>
-					<p className="text-sm text-muted-foreground">Rarity: {card.rarity}</p>
+					<h2 className="text-xl font-bold">{card.name} <span className="text-sm text-muted-foreground">#{card.setPos}</span></h2>
+					<p className="text-sm text-muted-foreground">
+						<strong>ID:</strong> {card.id}
+					</p>
+					<p className="text-sm text-muted-foreground">
+						<strong>Categoría:</strong> {card.category}
+					</p>
+					<p className="text-sm text-muted-foreground">
+						<strong>Rareza:</strong> {card.rarity}
+					</p>
+					<p className="text-sm text-muted-foreground">
+						<strong>Ilustrador:</strong> {card.illustrator}
+					</p>
 				</CardContent>
 			</CardShad>
 		</div>
