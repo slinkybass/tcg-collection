@@ -19,15 +19,21 @@ export default function Card() {
 					<p className="text-sm text-muted-foreground">
 						<strong>ID:</strong> {card.id}
 					</p>
-					<p className="text-sm text-muted-foreground">
-						<strong>Categoría:</strong> {card.category}
-					</p>
-					<p className="text-sm text-muted-foreground">
-						<strong>Rareza:</strong> {card.rarity}
-					</p>
-					<p className="text-sm text-muted-foreground">
-						<strong>Ilustrador:</strong> {card.illustrator}
-					</p>
+					{card.category ? (
+						<p className="text-sm text-muted-foreground">
+							<strong>Categoría:</strong> {card.category}
+						</p>
+					) : null}
+					{card.rarity ? (
+						<p className="text-sm text-muted-foreground">
+							<strong>Rareza:</strong> {card.rarity}
+						</p>
+					) : null}
+					{card.illustrator ? (
+						<p className="text-sm text-muted-foreground">
+							<strong>Ilustrador:</strong> {card.illustrator}
+						</p>
+					) : null}
 				</CardContent>
 			</CardShad>
 		</div>
