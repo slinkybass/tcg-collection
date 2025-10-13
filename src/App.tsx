@@ -16,7 +16,7 @@ function App() {
 					<Link to="/">Inicio</Link>
 				</Button>
 				<Button asChild>
-					<Link to="/series">Cards</Link>
+					<Link to="/series">Cartas</Link>
 				</Button>
 				<Button asChild>
 					<Link to="/collection">Colección</Link>
